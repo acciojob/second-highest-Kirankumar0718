@@ -9,8 +9,18 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+let a=arr[0];
+let b=arr[1];
+for(let i=2;i<arr.length;i++)
+{
+	let curmin =a < b ? a : b;
+    let curmax =a > b ? a : b;
+	if(curmin<arr[i]){
+		a = curmax;
+		b= arr[i];
+	}
+}
+console.log(a<b?a:b);			
 		}
 
 		function Main() {
